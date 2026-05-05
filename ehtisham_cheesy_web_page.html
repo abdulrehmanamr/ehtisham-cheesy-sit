@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ehtisham - Cheesy Vibes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 350px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff6f61;
+    }
+    h1 {
+      margin: 15px 0 5px;
+    }
+    .line {
+      font-size: 16px;
+      margin: 10px 0;
+      color: #555;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff6f61;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff3b2e;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.ibb.co/zWKKCCZ3/Whats-App-Image-2026-04-04-at-4-22-42-PM.jpg" alt="Ehtisham">
+    <h1>Ehtisham 😎</h1>
+    <p class="line" id="line">Click the button for cheesy vibes 😏</p>
+    <button onclick="newLine()">Generate Cheesy Line</button>
+  </div>
+
+  <script>
+    const lines = [
+      "Are you made of cheese? Because you're looking gouda 😏",
+      "Ehtisham, tum smile karo to WiFi signals full ho jate hain 📶😄",
+      "Are you Google? Because you have everything I'm searching for 🔍❤️",
+      "Tumhari smile itni bright hai, bijli ka bill kam ho jaye 💡😂",
+      "You're hotter than Lahore ki garmi 🔥😎",
+      "Agar style crime hota, to tum life sentence pe hote 😏",
+      "You're not a snack... pura buffet ho bhai 🍔😂",
+      "Dil keh raha hai... Ehtisham OP hai ❤️🔥",
+      "Tumhe dekh ke lagta hai filter bhi jealous ho gaya 📸😆"
+    ];
+
+    function newLine() {
+      const random = Math.floor(Math.random() * lines.length);
+      document.getElementById("line").innerText = lines[random];
+    }
+  </script>
+</body>
+</html>
